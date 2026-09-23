@@ -1,16 +1,46 @@
-MIT License
+# MIT-Based Attribution License
 
 Copyright (c) 2026 WoPixel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+of this template and associated files (the "Software"), to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software,
+and to permit persons to whom the Software is furnished to do so, subject
+to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
+### 1. Attribution Required
+
+The copyright notice and WoPixel attribution must be retained in all
 copies or substantial portions of the Software.
+
+When the Software is used in a website or application, the following
+attribution must remain publicly visible:
+
+**Built by WoPixel** — https://wopixel.com/
+
+The attribution may be placed in the website footer or another reasonably
+visible location.
+
+### 2. Permission to Modify
+
+You may modify, customize, and adapt the Software for personal or commercial
+projects.
+
+### 3. Redistribution
+
+You may distribute projects that use or contain the Software, provided that
+the WoPixel copyright notice and attribution requirement described above
+are retained.
+
+You may not remove, hide, or intentionally obscure the required attribution.
+
+### 4. Third-Party Components
+
+Third-party libraries, fonts, icons, images, and other assets included with
+the Software may be subject to their own licenses. Those licenses remain
+applicable to their respective components.
+
+### 5. No Warranty
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
