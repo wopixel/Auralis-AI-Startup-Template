@@ -1,5 +1,10 @@
 # Auralis AI Startup Template
 
+<p align="center">
+  <img src="./AI%20Startup%20Template.png" alt="Auralis AI Startup Template" width="600">
+</p>
+
+
 ## Overview
 
 Auralis is a responsive HTML5 AI startup template for product-led companies, AI platforms, developer tools, and intelligent workflow products. It is built as a static template with a serious editorial interface, a light and dark theme, Tabler Icons, a Three.js hero scene, GSAP animations, Swiper JS, Lenis smooth scrolling, responsive navigation, working tabs, product dashboard controls, forms, pricing controls, filters, accordions, and theme-aware product visuals.
