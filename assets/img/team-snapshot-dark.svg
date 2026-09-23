@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Auralis team workspace</title>
+  <desc id="desc">A calm workspace illustration showing a planning board, team notes, and a model performance chart.</desc>
+  <rect width="1200" height="760" fill="#0d0d0f"/>
+  <rect x="56" y="52" width="1088" height="656" rx="10" fill="#141416" stroke="#434047"/>
+  <rect x="56" y="52" width="1088" height="72" rx="10" fill="#141416"/>
+  <circle cx="96" cy="88" r="14" fill="#dfb994"/><circle cx="130" cy="88" r="14" fill="#d6cb99"/><circle cx="164" cy="88" r="14" fill="#9edcca"/>
+  <text x="210" y="94" fill="#141416" font-family="Arial, sans-serif" font-size="18" font-weight="700">Monday planning · Auralis</text>
+  <rect x="945" y="72" width="160" height="32" rx="5" fill="#c34b9a"/><text x="983" y="93" fill="#fff" font-family="Arial, sans-serif" font-size="10" font-weight="700">Share workspace</text>
+  <text x="94" y="176" fill="#969199" font-family="Arial, sans-serif" font-size="11" font-weight="700">TEAM SIGNALS</text>
+  <rect x="94" y="200" width="310" height="170" rx="7" fill="#0d0d0f" stroke="#29282d"/>
+  <text x="118" y="237" fill="#f7f5f7" font-family="Arial, sans-serif" font-size="15" font-weight="700">Focus this week</text>
+  <circle cx="132" cy="278" r="13" fill="#c34b9a"/><circle cx="162" cy="278" r="13" fill="#9edcca"/><circle cx="192" cy="278" r="13" fill="#dfb994"/><circle cx="222" cy="278" r="13" fill="#a93680"/>
+  <text x="118" y="328" fill="#cbc7cd" font-family="Arial, sans-serif" font-size="12">Ship the evaluation workflow</text>
+  <text x="118" y="350" fill="#969199" font-family="Arial, sans-serif" font-size="10">4 owners · 11 tasks in progress</text>
+  <rect x="428" y="200" width="688" height="170" rx="7" fill="#0d0d0f" stroke="#29282d"/>
+  <text x="454" y="237" fill="#f7f5f7" font-family="Arial, sans-serif" font-size="15" font-weight="700">Quality signal</text>
+  <text x="454" y="260" fill="#969199" font-family="Arial, sans-serif" font-size="10">Average response quality over the last 6 sprints</text>
+  <path d="M454 326C494 303 526 315 554 292s42-8 73-15 46 16 74-3 47 5 75-15 47 8 77-19 47-7 80-32 45 4 76-21" fill="none" stroke="#9edcca" stroke-width="4" stroke-linecap="round"/>
+  <path d="M454 326C494 303 526 315 554 292s42-8 73-15 46 16 74-3 47 5 75-15 47 8 77-19 47-7 80-32 45 4 76-21" fill="none" stroke="#9edcca" stroke-width="14" opacity=".08"/>
+  <text x="1032" y="242" fill="#9edcca" font-family="Arial, sans-serif" font-size="23" font-weight="700">94.8%</text>
+  <text x="1032" y="260" fill="#969199" font-family="Arial, sans-serif" font-size="10">+6.2 pts</text>
+  <text x="94" y="418" fill="#969199" font-family="Arial, sans-serif" font-size="11" font-weight="700">PLANNING BOARD</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="94" y="442" width="310" height="226" rx="7" fill="#0d0d0f" stroke="#29282d"/>
+    <text x="118" y="476" fill="#f7f5f7" font-size="13" font-weight="700">In progress</text>
+    <rect x="118" y="500" width="262" height="42" rx="5" fill="#141416" stroke="#29282d"/><circle cx="138" cy="521" r="7" fill="#c34b9a"/><text x="154" y="525" fill="#cbc7cd" font-size="11">Tune support router</text>
+    <rect x="118" y="554" width="262" height="42" rx="5" fill="#141416" stroke="#29282d"/><circle cx="138" cy="575" r="7" fill="#d6cb99"/><text x="154" y="579" fill="#cbc7cd" font-size="11">Review escalation rules</text>
+    <rect x="118" y="608" width="262" height="42" rx="5" fill="#141416" stroke="#29282d"/><circle cx="138" cy="629" r="7" fill="#9edcca"/><text x="154" y="633" fill="#cbc7cd" font-size="11">Publish evaluation v2</text>
+    <rect x="428" y="442" width="310" height="226" rx="7" fill="#0d0d0f" stroke="#29282d"/>
+    <text x="452" y="476" fill="#f7f5f7" font-size="13" font-weight="700">Decision log</text>
+    <text x="452" y="514" fill="#969199" font-size="10">09:42</text><text x="510" y="514" fill="#cbc7cd" font-size="11">Aster moved to production</text>
+    <text x="452" y="554" fill="#969199" font-size="10">10:18</text><text x="510" y="554" fill="#cbc7cd" font-size="11">Added source citation rule</text>
+    <text x="452" y="594" fill="#969199" font-size="10">11:06</text><text x="510" y="594" fill="#cbc7cd" font-size="11">Raised review threshold</text>
+    <rect x="762" y="442" width="354" height="226" rx="7" fill="#0d0d0f" stroke="#29282d"/>
+    <text x="786" y="476" fill="#f7f5f7" font-size="13" font-weight="700">Next milestone</text>
+    <text x="786" y="522" fill="#c34b9a" font-size="36" font-weight="700">14</text><text x="858" y="520" fill="#cbc7cd" font-size="13">days until launch review</text>
+    <rect x="786" y="556" width="300" height="7" rx="3" fill="#434047"/><rect x="786" y="556" width="222" height="7" rx="3" fill="#c34b9a"/>
+    <text x="786" y="596" fill="#969199" font-size="10">74% of launch checklist complete</text>
+  </g>
+</svg>
