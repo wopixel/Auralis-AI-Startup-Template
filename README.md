@@ -1,7 +1,9 @@
 # Auralis AI Startup Template
 
 <p align="center">
-  <img src="./AI%20Startup%20Template.png" alt="Auralis AI Startup Template" width="600">
+  <a href="https://wopixel.com/" target="_blank">
+    <img src="./AI%20Startup%20Template.png" alt="Auralis AI Startup Template" width="800">
+  </a>
 </p>
 
 
