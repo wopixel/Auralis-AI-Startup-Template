@@ -107,6 +107,154 @@ const initSurfaceParallax = () => {
   });
 };
 
+const initPremiumChrome = () => {
+  const header = document.querySelector('.site-header');
+  if (header) {
+    ScrollTrigger.create({
+      start: 18,
+      onToggle: ({ isActive }) => header.classList.toggle('is-scrolled', isActive)
+    });
+  }
+
+  const progress = document.createElement('div');
+  progress.className = 'scroll-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.append(progress);
+  gsap.set(progress, { scaleX: 0, transformOrigin: 'left center' });
+  gsap.to(progress, {
+    scaleX: 1,
+    ease: 'none',
+    scrollTrigger: { start: 0, end: 'max', scrub: .18 }
+  });
+
+  document.querySelectorAll('.btn, .feature-link, .text-link').forEach((element) => {
+    element.addEventListener('pointerenter', (event) => {
+      if (event.pointerType === 'touch') return;
+      gsap.to(element, { y: -2, duration: .28, ease: 'power2.out', overwrite: true });
+    });
+    element.addEventListener('pointerleave', () => {
+      gsap.to(element, { x: 0, y: 0, duration: .45, ease: 'elastic.out(1, .55)', overwrite: true });
+    });
+  });
+};
+
+const animateProductSurface = () => {
+  const stage = document.querySelector('.product-stage');
+  if (!stage) return;
+
+  const bars = stage.querySelectorAll('.chart-bar');
+  const activity = stage.querySelectorAll('.activity-row');
+  const metrics = stage.querySelectorAll('.metric');
+  gsap.set(metrics, { autoAlpha: 0, y: 16 });
+  gsap.set(bars, { autoAlpha: 0, scaleY: 0, transformOrigin: 'bottom' });
+  gsap.set(activity, { autoAlpha: 0, x: 12 });
+
+  gsap.timeline({
+    scrollTrigger: { trigger: stage, start: 'top 78%', once: true },
+    defaults: { ease: 'power3.out' }
+  })
+    .to(stage.querySelector('.product-side'), { autoAlpha: 1, x: 0, duration: .55 }, 0)
+    .to(metrics, { autoAlpha: 1, y: 0, duration: .5, stagger: .08 }, .16)
+    .to(bars, { autoAlpha: 1, scaleY: 1, duration: .65, stagger: .045 }, .32)
+    .to(activity, { autoAlpha: 1, x: 0, duration: .4, stagger: .08 }, .45);
+};
+
+const initScrollDepth = () => {
+  const hero = document.querySelector('.hero--home');
+  if (hero) {
+    const satellite = hero.querySelector('.hero-satellite');
+    const orbits = hero.querySelectorAll('.hero-orbit');
+    const copy = hero.querySelector('[data-hero-copy]');
+    const timeline = gsap.timeline({ defaults: { ease: 'power4.out' } });
+    if (satellite) timeline.fromTo(satellite, { autoAlpha: 0, y: 42, rotateZ: 3 }, { autoAlpha: 1, y: 0, rotateZ: 0, duration: 1.15 }, .45);
+    if (orbits.length) timeline.fromTo(orbits, { autoAlpha: 0, scale: .72 }, { autoAlpha: 1, scale: 1, duration: 1.45, stagger: .12 }, .1);
+    if (satellite || copy) {
+      gsap.timeline({ scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 1.2 } })
+        .to(satellite, { yPercent: -22, rotateZ: -3, ease: 'none' }, 0)
+        .to(orbits, { yPercent: 10, scale: 1.08, ease: 'none' }, 0)
+        .to(copy, { yPercent: -8, ease: 'none' }, 0);
+    }
+  }
+
+  gsap.utils.toArray('.snapshot-frame img, .quote-aside, .stat-grid').forEach((element) => {
+    gsap.fromTo(element, { y: 34, autoAlpha: 0 }, {
+      y: 0,
+      autoAlpha: 1,
+      duration: .95,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: element, start: 'top 88%', once: true }
+    });
+  });
+
+  gsap.utils.toArray('.section--tint').forEach((section) => {
+    gsap.to(section, {
+      backgroundPosition: '0 56px',
+      ease: 'none',
+      scrollTrigger: { trigger: section, start: 'top bottom', end: 'bottom top', scrub: true }
+    });
+  });
+};
+
+const initPageAtmosphere = () => {
+  document.querySelectorAll('.page-hero').forEach((hero) => {
+    const glow = document.createElement('div');
+    glow.className = 'page-hero-glow';
+    glow.setAttribute('aria-hidden', 'true');
+    const rings = document.createElement('div');
+    rings.className = 'page-hero-rings';
+    rings.setAttribute('aria-hidden', 'true');
+    hero.append(glow, rings);
+
+    gsap.fromTo([glow, rings], { autoAlpha: 0, scale: .72, rotate: -12 }, {
+      autoAlpha: 1,
+      scale: 1,
+      rotate: 0,
+      duration: 1.5,
+      stagger: .12,
+      ease: 'power4.out'
+    });
+    gsap.to(rings, {
+      yPercent: 18,
+      rotate: 18,
+      ease: 'none',
+      scrollTrigger: { trigger: hero, start: 'top top', end: 'bottom top', scrub: 1.1 }
+    });
+  });
+};
+
+const initLivingDetails = () => {
+  const groups = [
+    '.value-grid', '.team-grid', '.case-grid', '.pricing-grid', '.article-grid',
+    '.integration-grid', '.contact-list', '.timeline', '.mini-grid', '.accordion-item'
+  ];
+  groups.forEach((selector) => {
+    document.querySelectorAll(selector).forEach((group) => {
+      const items = selector === '.accordion-item' ? [group] : [...group.children];
+      if (!items.length) return;
+      gsap.from(items, {
+        y: 28,
+        rotateX: -7,
+        autoAlpha: 0,
+        duration: .72,
+        stagger: .08,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: group, start: 'top 86%', once: true }
+      });
+    });
+  });
+
+  document.querySelectorAll('.check-list').forEach((list) => {
+    gsap.from(list.children, {
+      x: -16,
+      autoAlpha: 0,
+      duration: .48,
+      stagger: .08,
+      ease: 'power2.out',
+      scrollTrigger: { trigger: list, start: 'top 87%', once: true }
+    });
+  });
+};
+
 const initGsapMotion = () => {
   if (reduceMotion) return;
 
@@ -163,8 +311,26 @@ const initGsapMotion = () => {
     });
   });
 
+  document.querySelectorAll('.section-heading:not([data-reveal]), .split-copy:not([data-reveal])').forEach((section) => {
+    const children = section.querySelectorAll(':scope > .section-label, :scope > h2, :scope > p');
+    if (!children.length) return;
+    gsap.from(children, {
+      y: 24,
+      autoAlpha: 0,
+      duration: .72,
+      stagger: .09,
+      ease: 'power3.out',
+      scrollTrigger: { trigger: section, start: 'top 84%', once: true }
+    });
+  });
+
   initHeroParallax();
   initSurfaceParallax();
+  initPremiumChrome();
+  animateProductSurface();
+  initScrollDepth();
+  initPageAtmosphere();
+  initLivingDetails();
   window.setTimeout(() => ScrollTrigger.refresh(), 120);
 };
 
