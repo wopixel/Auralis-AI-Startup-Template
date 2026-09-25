@@ -133,31 +133,6 @@ html[data-theme=light] .hero-visual-frame .scene-status,html[data-theme=light] .
 html[data-theme=light] .hero-visual-frame{background:#f4edf3;border-color:#d0bfce}
 @media(max-width:760px){.hero-visual-frame .scene-status{top:14px;right:14px;font-size:7px}.scene-corner{font-size:6px}.scene-corner--one{left:14px;top:14px}.scene-corner--two{right:14px;bottom:14px}}
 
-/* The 3D scene is intentionally unframed: it should occupy the hero, not read as a card. */
-.hero--home>.container.hero-layout{display:block}
-.hero-layout .hero-copy{width:48%;max-width:520px;height:100%;display:flex;flex-direction:column;justify-content:center}
-.hero-visual{position:absolute;inset:76px 0 auto;width:100%;height:calc(100% - 152px);z-index:2;pointer-events:none;overflow:visible}
-.hero-visual-frame{position:static;width:100%;height:100%;min-height:0;aspect-ratio:auto;border:0;background:transparent;box-shadow:none;overflow:visible}
-.hero-visual-frame .hero-scene{position:absolute;inset:0;width:100%;height:100%;opacity:1}
-.hero-visual-frame .scene-status{top:38px;right:42px}
-.hero-visual-kicker{position:absolute;top:38px;left:28px;right:42px;z-index:3;margin:0}
-.hero-visual-caption{position:absolute;left:28px;right:42px;bottom:27px;z-index:3;margin:0}
-.scene-corner--one{left:28px;top:74px}.scene-corner--two{right:42px;bottom:71px}
-html[data-theme=light] .hero-visual-frame{background:transparent;border:0;box-shadow:none}
-
-/* Keep the artwork quiet around the copy; the product message carries the hierarchy. */
-.hero-visual-kicker,.hero-visual-caption,.hero-visual-frame .scene-status,.scene-corner{display:none}
-.hero-layout .hero-copy{width:44%;}
-html[data-theme=light] .hero-layout .hero-copy{background:transparent}
-
-@media(max-width:1100px){.hero-layout .hero-copy{width:48%}.hero-visual{inset:68px 0 auto;height:calc(100% - 136px)}.hero-visual-kicker{left:8px;right:24px}.hero-visual-caption{left:8px;right:24px}.hero-visual-frame .scene-status{right:24px}.scene-corner--one{left:8px}.scene-corner--two{right:24px}}
-@media(max-width:760px){
-  .hero--home>.container.hero-layout{display:flex}
-  .hero-layout .hero-copy{width:auto;height:auto;display:block}
-  .hero-visual{position:relative;inset:auto;width:100%;height:340px;z-index:2;flex:0 0 340px}
-  .hero-visual-kicker{top:0;left:0;right:0}.hero-visual-caption{left:0;right:0;bottom:0}.hero-visual-frame .scene-status{top:35px;right:0}.scene-corner--one{left:0;top:68px}.scene-corner--two{right:0;bottom:44px}
-}
-
 /* Restore the pre-hero-refresh composition. */
 .hero--home{height:655px;min-height:0;padding:0;background:#0d0d0f;color:#f7f5f7;border-bottom:1px solid #29282d;overflow:hidden}
 .hero--home>.container{height:100%;display:flex;align-items:center;position:relative;pointer-events:none}
